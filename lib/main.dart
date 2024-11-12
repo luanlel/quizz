@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'tela_inicial.dart'
+import 'tela_inicial.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MenuApp());
 
-class MyApp extends StatelessWidget {
+class MenuApp extends StatelessWidget {
   @override
+
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Meu App Quiz',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      title: 'App Quiz',
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
       home: TelaInicial(),
     );
   }

@@ -127,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Text(alternativas),
                       ),
                     );
-                  }).toList(),
+                  }),
                   const SizedBox(height: 20),
                   Text(
                     mensagem,

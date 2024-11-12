@@ -3,17 +3,20 @@ import 'tela_quiz.dart';
 
 class TelaInicial extends StatelessWidget {
   @override
-  Widget build(BuildContex context) {
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(title: Text('Quiz App')),
+      appBar: AppBar(
+        title: Text('Quiz App'),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'lib/assets/imagens/',
-
-
+              'lib/assets/imagemquiz.png', 
+              width: 600,
+              height: 500,
+              fit: BoxFit.fitWidth,
             ),
             SizedBox(height: 20),
             Text(
@@ -25,14 +28,14 @@ class TelaInicial extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TelaQuiz()),
+                  MaterialPageRoute(builder: (context) => MyHomePage(title: 'Quiz',)),
                 );
               },
-              child: 
-            )
-          ]
-        )
-      )
+              child: Text('Iniciar Quiz'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
